@@ -141,27 +141,63 @@ a{color:inherit;text-decoration:none}
 }
 .carousel button.prev { left: 10px; }
 .carousel button.next { right: 10px; }
-/* ====== RESPONSIVIDADE (MOBILE FIRST) ====== */
-@media (max-width: 768px) {
+/* ====== RESPONSIVIDADE APRIMORADA ====== */
+@media (max-width: 1024px) {
+  /* Texto mais fluido em tablets */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 
-  /* Container geral */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Estrutura geral */
   .container {
     padding: 0 1rem;
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
-  /* Seções tipo "split" (texto + imagem lado a lado) */
-  .split, .container.split {
-    flex-direction: column;
+  /* Seções em coluna no mobile */
+  .split,
+  .panel-card,
+  .hero .container.split {
+    flex-direction: column !important;
     text-align: center;
+    align-items: center;
   }
 
-  .split img, .panel-card img, .carousel img {
+  /* Ajuste das imagens */
+  img {
     max-width: 100%;
     height: auto;
   }
 
-  /* Textos e botões centralizados */
+  /* Corrige a imagem grande de Identidade Visual */
+  .gallery img,
+  img[alt*="Identidade Visual"] {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.8rem;
+  }
+
+  /* Hero (capa inicial) */
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Texto e botões */
   h1, h2, h3, p {
     text-align: center;
   }
@@ -169,27 +205,30 @@ a{color:inherit;text-decoration:none}
   .btn {
     display: inline-block;
     margin: 1rem auto;
+    font-size: 1rem;
   }
 
-  /* Menu */
+  /* Menu e navegação */
   nav.menu {
     display: block;
     text-align: center;
   }
 
-  nav.menu a, nav.menu button {
+  nav.menu a,
+  nav.menu button {
     display: block;
     padding: 0.8rem;
   }
 
-  /* Ajuste do hero */
-  .hero {
-    height: auto;
-    padding: 80px 20px;
-  }
-
   /* Carrossel */
+  .carousel {
+    width: 100%;
+  }
   .carousel-track {
+    display: flex;
     justify-content: center;
+  }
+  .carousel-track img {
+    max-width: 80%;
   }
 }
