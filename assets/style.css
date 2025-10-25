@@ -141,3 +141,55 @@ a{color:inherit;text-decoration:none}
 }
 .carousel button.prev { left: 10px; }
 .carousel button.next { right: 10px; }
+/* ====== RESPONSIVIDADE (MOBILE FIRST) ====== */
+@media (max-width: 768px) {
+
+  /* Container geral */
+  .container {
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+
+  /* Seções tipo "split" (texto + imagem lado a lado) */
+  .split, .container.split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .split img, .panel-card img, .carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Textos e botões centralizados */
+  h1, h2, h3, p {
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 1rem auto;
+  }
+
+  /* Menu */
+  nav.menu {
+    display: block;
+    text-align: center;
+  }
+
+  nav.menu a, nav.menu button {
+    display: block;
+    padding: 0.8rem;
+  }
+
+  /* Ajuste do hero */
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  /* Carrossel */
+  .carousel-track {
+    justify-content: center;
+  }
+}
