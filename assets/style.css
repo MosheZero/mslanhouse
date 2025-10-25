@@ -283,3 +283,21 @@ a{color:inherit;text-decoration:none}
 
 /* Evita qualquer recorte lateral em telas pequenas e notches */
 html, body{ width:100%; }
+
+
+/* ===== FIX: Hero como fundo + responsivo ===== */
+.hero{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh;
+  display: grid;
+  align-items: center;
+}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.22));}
+.hero .container{position:relative;z-index:2;}
+@media (max-width: 768px){
+  .hero .split{display:block !important;}
+  .hero .split, .hero .container.split{grid-template-columns:1fr !important;}
+  .hero-art{display:none !important;}
+}
