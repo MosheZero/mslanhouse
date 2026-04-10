@@ -160,7 +160,6 @@ a{color:inherit;text-decoration:none}
   /* Estrutura geral */
   .container {
     padding: 0 1rem;
-    flex-direction: column !important;
   }
 
   /* Seções em coluna no mobile */
@@ -305,4 +304,39 @@ html, body{ width:100%; }
   .hero .split{display:block !important;}
   .hero .split, .hero .container.split{grid-template-columns:1fr !important;}
   .hero-art{display:none !important;}
+}
+@media (max-width: 768px){
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px){
+  .hero {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px){
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
